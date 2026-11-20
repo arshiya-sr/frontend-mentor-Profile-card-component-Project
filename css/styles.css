@@ -1,14 +1,116 @@
-/* Header */
+/* Main */
 
+.main {
+    background-color: var(--Blue-600);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
+.top-ball {
+    position: absolute;
+    background: url('../images/bg-pattern-top.svg');
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    z-index: -1;
+    top: 10%;
+    left: 10%;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: var(--radius-lg);
+    width: clamp(320px, 320px + 15vw, 450px);
+}
+
+.card-top {
+    background: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-block-start: var(--space-xxl);
+    margin-block-end: var(--space-lg);
+}
+
+.person-image {
+    border-radius: var(--radius-circle);
+    border: 6px solid var(--White);
+    position: absolute;
+    bottom: calc(50% + var(--space-md));
+}
+
+.age-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-block-end: var(--space-xxs);
+}
+
+.person-name {
+    font-size: var(--fs-lg);
+    color: var(--Navy-950)
+}
+
+.person-age,
+.person-city {
+    color: var(--Gray-500);
+}
+
+.person-age {
+    font-size: var(--fs-lg);
+}
+
+.person-city {
+    font-size: var(--fs-md);
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--space-md) 0;
+    border-top: 2px solid var(--Gray-100);
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--Navy-950);
+}
+
+.caption {
+    color: var(--Gray-500)
+}
 
 /* Footer */
 
 .footer {
     font-size: var(--fs-sm);
     text-align: center;
+    background-color: var(--Navy-950);
+    color: var(--White)
 }
 
 .credit {
-    color: hsl(228, 45%, 44%);
+    color: var(--White-light);
 }
