@@ -11,22 +11,36 @@
     overflow: hidden;
 }
 
-.top-ball {
+.ball {
     position: absolute;
     background: url('../images/bg-pattern-top.svg');
-    aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 800px;
-    z-index: -1;
-    top: 10%;
-    left: 10%;
+    aspect-ratio: 1/1;
+    width: 1000px;
+    z-index: 10;
+}
+
+.top {
+    top: -60%;
+    left: -150%;
+}
+
+.bottom {
+    bottom: -60%;
+    right: -120%;
 }
 
 .card {
     background-color: var(--White);
     border-radius: var(--radius-lg);
     width: clamp(320px, 320px + 15vw, 450px);
+    z-index: 11;
+    transition: all 0.3s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card-top {
@@ -113,4 +127,22 @@
 
 .credit {
     color: var(--White-light);
+}
+
+/* Desktop layout */
+/* 48rem = 560px based on 16px defualt root HTML font size */
+@media screen and (min-width: 35rem) {
+    .ball {
+        width: 1200px;
+    }
+
+    .top {
+        top: -60%;
+        left: -20%;
+    }
+
+    .bottom {
+        bottom: -90%;
+        right: -20%;
+    }
 }
