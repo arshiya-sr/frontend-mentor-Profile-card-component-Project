@@ -41,6 +41,7 @@
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 5px 5px 25px var(--Shadow);
 }
 
 .card-top {
@@ -66,6 +67,12 @@
     border: 6px solid var(--White);
     position: absolute;
     bottom: calc(50% + var(--space-md));
+    transition: all 0.3s ease-in;
+}
+
+.person-image:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px var(--Shadow);
 }
 
 .age-name {
@@ -77,7 +84,13 @@
 
 .person-name {
     font-size: var(--fs-lg);
-    color: var(--Navy-950)
+    color: var(--Navy-950);
+    transition: all 0.2s ease-in;
+}
+
+.person-name:hover {
+    transform: scale(1.01);
+    color: var(--Red-highlight)
 }
 
 .person-age,
