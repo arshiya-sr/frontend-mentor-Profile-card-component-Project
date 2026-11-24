@@ -37,6 +37,7 @@
     width: clamp(320px, 320px + 15vw, 450px);
     z-index: 11;
     transition: all 0.3s ease-in;
+    aspect-ratio: 1/1;
 }
 
 .card:hover {
